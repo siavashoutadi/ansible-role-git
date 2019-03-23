@@ -1,17 +1,3 @@
-Role Name
-=========
-
-A role to install and configure git.
-
-Requirements
-------------
-
-None.
-
-Role Variables
---------------
-
-```yaml
 ---
 # Git packages. By default only git is installed.
 # But for example it can be changed to git-all.
@@ -33,35 +19,3 @@ git_config: []
 # Global git configuration will be added to home directroy
 # of this user: ~/.gitconfig
 git_user: root
-
-```
-
-Dependencies
-------------
-
-None.
-
-Example Playbook
-----------------
-
-playbook.yml
-```yaml
-- hosts: servers
-  become: true
-  roles:
-    - role: siavashoutadi.git
-```
-And run like this:
-```shell
-ansible-playbook -i inventory -K playbook.yml
-```
-
-License
--------
-
-Apache 2.0.
-
-Author Information
-------------------
-
-Siavash Outadi.
