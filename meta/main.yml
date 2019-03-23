@@ -1,0 +1,27 @@
+---
+galaxy_info:
+  author: Siavash Outadi
+  description: A role to install and configure git.
+  license: Apache 2.0
+
+  min_ansible_version: 2.7.0
+
+  platforms:
+    - name: EL
+      versions:
+        - 7
+    - name: Fedora
+      versions:
+        - 29
+    - name: Ubuntu
+      versions:
+        - bionic
+
+  galaxy_tags:
+    - development
+    - git
+    - source
+    - scm
+    - versioning
+
+  dependencies: []
