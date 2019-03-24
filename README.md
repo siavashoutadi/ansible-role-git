@@ -46,6 +46,18 @@ Example Playbook
 playbook.yml
 ```yaml
 - hosts: servers
+  vars:
+    git_config:
+      - name: user.name
+        value: User1
+      - name: user.email
+        value: user1@mail.com
+      - name: alias.co
+        value: "checkout"
+        scope: "system"
+      - name: alias.st
+        value: "status"
+        scope: "system"
   roles:
     - role: siavashoutadi.git
 ```
