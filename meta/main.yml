@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: git
   author: Siavash Outadi
   description: A role to install and configure git.
   license: Apache 2.0
