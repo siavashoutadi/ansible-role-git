@@ -4,15 +4,15 @@ services: docker
 
 env:
   global:
-    - ROLE_NAME: git
-    - ANSIBLE_VERSION: ">=2.7.0"
+    - ROLE_NAME=git
+    - ANSIBLE_VERSION=">=2.7.0"
   matrix:
-    - MOLECULE_IMAGE: centos:7
-      MOLECULE_IMAGE_NAME: centos7
-    - MOLECULE_IMAGE: fedora:29
-      MOLECULE_IMAGE_NAME: fedora29
-    - MOLECULE_IMAGE: ubuntu: ubuntu-bionic
-      MOLECULE_IMAGE_NAME: ubuntu:bionic
+    - MOLECULE_IMAGE=centos:7
+      MOLECULE_IMAGE_NAME=centos7
+    - MOLECULE_IMAGE=fedora:29
+      MOLECULE_IMAGE_NAME=fedora29
+    - MOLECULE_IMAGE=ubuntu:bionic
+      MOLECULE_IMAGE_NAME=ubuntu-bionic
 
 install:
   - pip install --upgrade molecule docker ansible$ANSIBLE_VERSION
@@ -27,4 +27,5 @@ script:
   - molecule test
 
 notifications:
-  webhooks: https://galaxy.ansible.com/api/v1/notifications/
+  webhooks:
+    - https://galaxy.ansible.com/api/v1/notifications/
