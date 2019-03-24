@@ -6,7 +6,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: "git_role_${MOLECULE_IMAGE-NAME:-instance}"
+  - name: "git_role_${MOLECULE_IMAGE_NAME:-instance}"
     image: "${MOLECULE_IMAGE:-centos:7}"
 provisioner:
   name: ansible
