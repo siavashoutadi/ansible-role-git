@@ -12,7 +12,6 @@ Role Variables
 --------------
 
 ```yaml
----
 # Git packages. By default only git is installed.
 # But for example it can be changed to git-all.
 git_packages:
@@ -47,13 +46,8 @@ Example Playbook
 playbook.yml
 ```yaml
 - hosts: servers
-  become: true
   roles:
     - role: siavashoutadi.git
-```
-And run like this:
-```shell
-ansible-playbook -i inventory -K playbook.yml
 ```
 
 License
