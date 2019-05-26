@@ -1,5 +1,7 @@
 ---
 language: python
+python:
+  - '2.7'
 services: docker
 
 env:
@@ -15,7 +17,8 @@ env:
       MOLECULE_IMAGE_NAME=ubuntu-bionic
 
 install:
-  - pip install --upgrade molecule docker ansible$ANSIBLE_VERSION
+  - pip install testinfra==1.19.0 molecule==2.20.0
+  - pip install --upgrade docker ansible$ANSIBLE_VERSION
 
 before_script:
   # Rename repository name to the galaxy role name.
