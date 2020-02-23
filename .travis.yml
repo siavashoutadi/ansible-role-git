@@ -6,6 +6,7 @@ env:
   global:
     - ROLE_NAME=git
     - ANSIBLE_VERSION=">=2.7.0"
+    - MOLECULE_VERSION="==2.22"
   matrix:
     - MOLECULE_IMAGE=centos:7
       MOLECULE_IMAGE_NAME=centos7
@@ -15,7 +16,7 @@ env:
       MOLECULE_IMAGE_NAME=ubuntu-bionic
 
 install:
-  - pip install --upgrade molecule docker ansible$ANSIBLE_VERSION
+  - pip install --upgrade molecule$MOLECULE_VERSION docker ansible$ANSIBLE_VERSION
 
 before_script:
   # Rename repository name to the galaxy role name.
